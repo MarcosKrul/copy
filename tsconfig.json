@@ -25,7 +25,10 @@
     
     "baseUrl": ".",
     "paths": {
-      "@NAMEHERE/*": ["./src/NAMEHERE/*"]
+      "@routes/*": ["./src/routes/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@middlewares/*": ["./src/middlewares/*"],
+      "@errors/*": ["./src/errors/*"]
     }
   }
 }

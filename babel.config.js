@@ -9,7 +9,10 @@ module.exports = {
     ["@babel/plugin-proposal-class-properties", { loose: false }],
     [
       "module-resolver", { alias: { 
-        "@NAMEHERE": "./src/NAMEHERE"
+        "@routes": "./src/routes",
+        "@controllers": "./src/controllers",
+        "@middlewares": "./src/middlewares",
+        "@errors": "./src/errors",
       }}
     ],
   ],
