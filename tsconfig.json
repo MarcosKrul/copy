@@ -28,7 +28,9 @@
       "@routes/*": ["./src/routes/*"],
       "@controllers/*": ["./src/controllers/*"],
       "@middlewares/*": ["./src/middlewares/*"],
-      "@errors/*": ["./src/errors/*"]
+      "@errors/*": ["./src/errors/*"],
+      "@services/*": ["./src/services/*"],
+      "@models/*": ["./src/models/*"]
     }
   }
 }

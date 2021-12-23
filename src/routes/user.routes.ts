@@ -6,5 +6,6 @@ const routes = Router();
 const userController = new UserController();
 
 routes.get("/read", userController.read);
+routes.post("/create", userController.create);
 
 export { routes };

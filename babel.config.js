@@ -13,6 +13,8 @@ module.exports = {
         "@controllers": "./src/controllers",
         "@middlewares": "./src/middlewares",
         "@errors": "./src/errors",
+        "@services": "./src/services",
+        "@models": "./src/models",
       }}
     ],
   ],
