@@ -7,10 +7,6 @@ const routes = Router();
 const userController = new UserController();
 
 routes.get("/read", ensureUserAuthenticatedMiddleware, userController.read);
-routes.post(
-  "/create",
-  ensureUserAuthenticatedMiddleware,
-  userController.create
-);
+routes.post("/create", userController.create);
 
 export { routes };

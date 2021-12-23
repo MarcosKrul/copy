@@ -2,6 +2,7 @@ import { Response, Request, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
 
 import { AppError } from "@errors/AppError";
+import { JwtPayLoad } from "@models/JwtPayLoad";
 
 const ensureUserAuthenticatedMiddleware = async (
   req: Request,
@@ -28,7 +29,9 @@ const ensureUserAuthenticatedMiddleware = async (
     });
 
   try {
-    const decoded = verify(token, process.env.JWT_SECRET || "");
+    const { id } = verify(token, process.env.JWT_SECRET || "") as JwtPayLoad;
+
+    Object.assign(req, { user: { id } });
 
     return next();
   } catch (err) {

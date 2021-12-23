@@ -10,7 +10,7 @@ const errorHandlerMiddleware = (
 ): void | Response => {
   return res.status(AppError.getErrorStatusCode(err)).json({
     success: false,
-    message: AppError.getErrorMessage(err) + err.message,
+    message: AppError.getErrorMessage(err),
   });
 };
 

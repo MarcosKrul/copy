@@ -31,6 +31,13 @@ class PostController {
     try {
       const { user_id: id } = req.params;
 
+      if (req.user.id !== id)
+        return res.status(401).json({
+          success: false,
+          message:
+            "Você não possui permissão para acessar os posts de outro usuário.",
+        });
+
       const listUserPostsService = new ListUserPostsService();
 
       const posts = await listUserPostsService.execute(id);
