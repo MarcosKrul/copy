@@ -12,5 +12,10 @@ routes.post(
   ensureUserAuthenticatedMiddleware,
   postController.create
 );
+routes.get(
+  "/read/:user_id",
+  ensureUserAuthenticatedMiddleware,
+  postController.readByUser
+);
 
 export { routes };
