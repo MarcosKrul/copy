@@ -1,7 +1,7 @@
 import { hash } from "bcryptjs";
 import EmailValidator from "email-validator";
-import { prismaClient } from "src";
 
+import { prismaClient } from "@database/index";
 import { AppError } from "@errors/AppError";
 import { CreateUserRequest } from "@models/CreateUserRequest";
 import { User } from "@prisma/client";

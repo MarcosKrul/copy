@@ -5,7 +5,6 @@ import express from "express";
 import helmet from "helmet";
 
 import { errorHandlerMiddleware } from "@middlewares/errorHandlerMiddleware";
-import { PrismaClient } from "@prisma/client";
 import { routes } from "@routes/index.routes";
 
 const app = express();
@@ -23,7 +22,3 @@ process.on("SIGTERM", () => {
 app.listen(process.env.PORT, () =>
   console.log(`Server started at ${process.env.PORT}`)
 );
-
-const prismaClient = new PrismaClient();
-
-export { prismaClient };

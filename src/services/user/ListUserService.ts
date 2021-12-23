@@ -1,5 +1,4 @@
-import { prismaClient } from "src";
-
+import { prismaClient } from "@database/index";
 import { User } from "@prisma/client";
 
 class ListUserService {

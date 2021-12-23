@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { AppError } from "src/errors/AppError";
 
+import { AppError } from "@errors/AppError";
 import { ListUserService, CreateUserService } from "@services/user/";
 
 class UserController {

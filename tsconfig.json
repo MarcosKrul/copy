@@ -30,7 +30,8 @@
       "@middlewares/*": ["./src/middlewares/*"],
       "@errors/*": ["./src/errors/*"],
       "@services/*": ["./src/services/*"],
-      "@models/*": ["./src/models/*"]
+      "@models/*": ["./src/models/*"],
+      "@database/*": ["./src/database/*"]
     }
   }
 }

@@ -15,6 +15,7 @@ module.exports = {
         "@errors": "./src/errors",
         "@services": "./src/services",
         "@models": "./src/models",
+        "@database": "./src/database",
       }}
     ],
   ],

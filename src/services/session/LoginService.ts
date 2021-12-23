@@ -1,7 +1,7 @@
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
-import { prismaClient } from "src";
 
+import { prismaClient } from "@database/index";
 import { AppError } from "@errors/AppError";
 import { LoginRequest } from "@models/LoginRequest";
 import { LoginResponse } from "@models/LoginResponse";
