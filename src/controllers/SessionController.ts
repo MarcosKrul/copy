@@ -18,7 +18,7 @@ class SessionController {
       return res.status(200).json({
         success: true,
         message: "Operação finalizada com sucesso.",
-        data: user,
+        content: user,
       });
     } catch (e) {
       return res.status(AppError.getErrorStatusCode(e)).json({

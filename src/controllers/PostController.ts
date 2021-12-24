@@ -17,7 +17,7 @@ class PostController {
       return res.status(200).json({
         success: true,
         message: "Operação finalizada com sucesso.",
-        data: posts,
+        content: posts,
       });
     } catch (e) {
       return res.status(AppError.getErrorStatusCode(e)).json({
@@ -45,7 +45,7 @@ class PostController {
       return res.status(200).json({
         success: true,
         message: "Operação finalizada com sucesso.",
-        data: posts,
+        content: posts,
       });
     } catch (e) {
       return res.status(AppError.getErrorStatusCode(e)).json({
@@ -71,7 +71,7 @@ class PostController {
       return res.status(200).json({
         success: true,
         message: "Operação finalizada com sucesso.",
-        data: post,
+        content: post,
       });
     } catch (e) {
       return res.status(AppError.getErrorStatusCode(e)).json({

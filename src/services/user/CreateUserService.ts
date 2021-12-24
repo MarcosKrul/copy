@@ -19,7 +19,7 @@ class CreateUserService {
       where: { email },
     });
 
-    if (hasUser) throw new AppError(404, "O e-mail informado já existe.");
+    if (hasUser) throw new AppError(400, "O e-mail informado já existe.");
 
     const { password: _, ...saved } = await prismaClient.user.create({
       data: {
