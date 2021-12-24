@@ -20,6 +20,10 @@ class ListUserPostsService {
         title: true,
         body: true,
         imageUrl: true,
+        createdAt: true,
+      },
+      orderBy: {
+        createdAt: "desc",
       },
     });
 

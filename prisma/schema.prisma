@@ -12,21 +12,22 @@ datasource db {
 }
 
 model User {
-  id       String  @id @default(dbgenerated("uuid_generate_v4()")) @map("id") @db.Uuid
+  id       String  @id @default(uuid()) @map("id") @db.Uuid
   name     String? @db.VarChar(100)
   email    String  @unique @db.VarChar(255)
   password String  @db.VarChar(255)
 
-  post Post?
+  post Post[]
 
   @@map("user")
 }
 
 model Post {
-  id       String @id @default(dbgenerated("uuid_generate_v4()")) @map("id") @db.Uuid
-  title    String
-  body     String
-  imageUrl String @map("image_url")
+  id        String   @id @default(uuid()) @map("id") @db.Uuid
+  title     String
+  body      String
+  imageUrl  String   @map("image_url")
+  createdAt DateTime @default(now()) @map("created_at")
 
   userId String @map("user_id") @db.Uuid
   user   User   @relation(fields: [userId], references: [id])

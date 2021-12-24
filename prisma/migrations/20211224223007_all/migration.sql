@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "user" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL,
     "name" VARCHAR(100),
     "email" VARCHAR(255) NOT NULL,
     "password" VARCHAR(255) NOT NULL,
@@ -10,10 +10,11 @@ CREATE TABLE "user" (
 
 -- CreateTable
 CREATE TABLE "post" (
-    "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
+    "id" UUID NOT NULL,
     "title" TEXT NOT NULL,
     "body" TEXT NOT NULL,
     "image_url" TEXT NOT NULL,
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "user_id" UUID NOT NULL,
 
     CONSTRAINT "post_pkey" PRIMARY KEY ("id")

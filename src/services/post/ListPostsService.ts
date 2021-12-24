@@ -9,6 +9,7 @@ class ListPostsService {
         id: true,
         imageUrl: true,
         title: true,
+        createdAt: true,
         user: {
           select: {
             name: true,
@@ -16,6 +17,9 @@ class ListPostsService {
             email: true,
           },
         },
+      },
+      orderBy: {
+        createdAt: "desc",
       },
     });
 
